@@ -1,3 +1,4 @@
+""" 根据CT DICOM生成DRR图像 """
 import os
 import matplotlib.pyplot as plt
 import torch
