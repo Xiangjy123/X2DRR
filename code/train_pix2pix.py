@@ -7,7 +7,7 @@ from torchvision import models
 from PIL import Image
 import matplotlib.pyplot as plt
 import pytorch_msssim
-
+from pathlib import Path
 from dataset import XrayDRRDataset
 from models import MultiScaleGenerator, PatchDiscriminator, UNetGenerator
 
@@ -15,8 +15,10 @@ from models import MultiScaleGenerator, PatchDiscriminator, UNetGenerator
 # 配置
 # ----------------------
 device = "cuda" if torch.cuda.is_available() else "cpu"
-data_root = r"F:\Files\Graduate_Research\X2DRR\data\xray_drr"
-output_dir = r"F:\Files\Graduate_Research\X2DRR\outputs"
+BASE_DIR = Path(__file__).resolve().parent.parent
+data_root = BASE_DIR / "data" / "xray_drr"
+output_dir = BASE_DIR / "outputs"
+checkpoint_dir = BASE_DIR / "checkpoints"
 os.makedirs(output_dir, exist_ok=True)
 
 subjects = [f"subject0{i}" for i in range(1,7)]
@@ -143,8 +145,8 @@ for epoch in range(num_epochs):
 # ----------------------
 # 训练结束后统一保存
 # ----------------------
-torch.save(G.state_dict(), os.path.join(output_dir, "G_final.pth"))
-torch.save(D.state_dict(), os.path.join(output_dir, "D_final.pth"))
+torch.save(G.state_dict(), os.path.join(checkpoint_dir, "G_final.pth"))
+torch.save(D.state_dict(), os.path.join(checkpoint_dir, "D_final.pth"))
 
 # ---- 生成对比图 ----
 x = xray[0].detach().cpu()

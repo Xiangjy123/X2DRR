@@ -7,6 +7,7 @@ from diffdrr.visualization import plot_drr
 from diffdrr.data import read
 import pydicom
 import numpy as np
+from pathlib import Path
 
 # -------------------------------
 # 1. 将 DICOM 读取并保存为 NIfTI
@@ -78,15 +79,18 @@ def normalize_contrast(img, lower_percent=2, upper_percent=98, gamma=None):
 # -------------------------------
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+# 项目根目录：X2DRR
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # 数据集路径
-data_root = r"F:\Files\Graduate_Research\X2DRR\data\CT"
+data_root = BASE_DIR / "data" / "CT"
 
 # 输出文件夹
-nifti_dir = r"F:\Files\Graduate_Research\X2DRR\data\nifti"
-os.makedirs(nifti_dir, exist_ok=True)
+nifti_dir = BASE_DIR / "data" / "nifti"
+drr_dir = BASE_DIR / "data" / "DRR"
 
-drr_dir = r"F:\Files\Graduate_Research\X2DRR\data\DRR"
-os.makedirs(drr_dir, exist_ok=True)
+nifti_dir.mkdir(parents=True, exist_ok=True)
+drr_dir.mkdir(parents=True, exist_ok=True)
 
 # 阈值：只处理文件数大于该值的文件夹
 min_files_threshold = 50

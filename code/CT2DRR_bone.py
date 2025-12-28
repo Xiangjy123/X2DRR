@@ -7,6 +7,7 @@ from diffdrr.visualization import plot_drr
 from diffdrr.data import read
 import pydicom
 import numpy as np
+from pathlib import Path
 
 def load_ct_as_nifti(dicom_dir, temp_nii_path):
     """
@@ -95,11 +96,12 @@ def extract_bone(nii_path, hu_threshold=250):
 """ 主程序 """
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-data_root = r"F:\Files\Graduate_Research\X2DRR\data\CT"
-nifti_dir = r"F:\Files\Graduate_Research\X2DRR\data\nifti"
-os.makedirs(nifti_dir, exist_ok=True)
-drr_dir = r"F:\Files\Graduate_Research\X2DRR\data\DRR"
-os.makedirs(drr_dir, exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent.parent
+data_root = BASE_DIR / "data" / "CT"
+nifti_dir = BASE_DIR / "data" / "nifti"
+drr_dir = BASE_DIR / "data" / "DRR"
+nifti_dir.mkdir(parents=True, exist_ok=True)
+drr_dir.mkdir(parents=True, exist_ok=True)
 
 min_files_threshold = 50
 
