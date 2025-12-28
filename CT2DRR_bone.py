@@ -8,20 +8,24 @@ from diffdrr.data import read
 import pydicom
 import numpy as np
 
-# -------------------------------
-# 1. 将 DICOM 读取并保存为 NIfTI
-# -------------------------------
 def load_ct_as_nifti(dicom_dir, temp_nii_path):
+    """
+    将 DICOM 文件夹读取为 NIfTI 格式
+    
+    :param dicom_dir: 原始 DICOM 文件夹路径
+    :param temp_nii_path: 保存的 NIfTI 文件路径
+    """
     reader = sitk.ImageSeriesReader()
     series_file_names = reader.GetGDCMSeriesFileNames(dicom_dir)
     if not series_file_names:
         raise ValueError(f"No DICOM files found in {dicom_dir}")
     
+    # 筛选出有效的 CT 文件
     valid_files = []
     for f in series_file_names:
         try:
-            ds = pydicom.dcmread(f, stop_before_pixels=True)
-            if ds.Modality == "CT":
+            ds = pydicom.dcmread(f, stop_before_pixels=True) # 只读元数据，不读像素数据
+            if ds.Modality == "CT": # 检查是否为 CT 文件
                 valid_files.append(f)
         except:
             continue
@@ -29,39 +33,42 @@ def load_ct_as_nifti(dicom_dir, temp_nii_path):
     if not valid_files:
         raise ValueError(f"No valid CT DICOM files in {dicom_dir}")
 
-    reader.SetFileNames(valid_files)
-    image = reader.Execute()
-    sitk.WriteImage(image, temp_nii_path)
+    reader.SetFileNames(valid_files) # 为DICOM阅读器设置要处理的文件列表
+    image = reader.Execute() # 执行读取
+    sitk.WriteImage(image, temp_nii_path) # 保存为 NIfTI 文件
     return temp_nii_path
 
-# -------------------------------
-# 2. 遍历数据集，选择文件数大于阈值的子文件夹
-# -------------------------------
 def select_dicom_folder(folder_path, min_files=50):
+    """
+    选择文件数大于阈值的子文件夹
+    
+    :param folder_path: 父文件夹路径
+    :param min_files: 最小文件数阈值
+    :return: 符合条件的子文件夹列表
+    """
     selected = []
     for sub in os.listdir(folder_path):
         sub_path = os.path.join(folder_path, sub)
         if os.path.isdir(sub_path):
-            num_files = sum(os.path.isfile(os.path.join(sub_path, f)) for f in os.listdir(sub_path))
+            num_files = sum(os.path.isfile(os.path.join(sub_path, f)) for f in os.listdir(sub_path)) # 统计文件数
             if num_files >= min_files:
                 selected.append(sub_path)
     if not selected:
         selected = [folder_path]
     return selected
 
-# -------------------------------
-# 3. 图像归一化 + 对比度拉伸 + 可选伽马 + 背景抑制
-# -------------------------------
 def enhance_bone_drr(img, lower_percent=1, upper_percent=99, gamma=0.7, background_threshold=0.02):
     """
+    图像归一化 + 对比度拉伸 + 可选伽马 + 背景抑制
+
     img: np.ndarray, DRR 输出
     lower_percent, upper_percent: 百分比裁剪
     gamma: gamma 增强
     background_threshold: 低值背景置0阈值
     """
     # 归一化 + 对比度拉伸
-    low, high = np.percentile(img, (lower_percent, upper_percent))
-    img_norm = np.clip((img - low) / (high - low), 0, 1)
+    low, high = np.percentile(img, (lower_percent, upper_percent)) # 根据百分比计算阈值
+    img_norm = np.clip((img - low) / (high - low), 0, 1) # 对比度拉伸和裁剪+归一化
 
     # Gamma增强
     if gamma is not None:
@@ -71,15 +78,12 @@ def enhance_bone_drr(img, lower_percent=1, upper_percent=99, gamma=0.7, backgrou
     img_norm[img_norm < background_threshold] = 0
     return img_norm
 
-# -------------------------------
-# 4. 提取骨头
-# -------------------------------
 def extract_bone(nii_path, hu_threshold=250):
     """
     只保留骨头 HU > hu_threshold
     """
-    image = sitk.ReadImage(nii_path)
-    img_np = sitk.GetArrayFromImage(image)
+    image = sitk.ReadImage(nii_path) # 读取 NIfTI 图像
+    img_np = sitk.GetArrayFromImage(image) # 转为 numpy 数组
     bone_mask = img_np > hu_threshold
     img_bone = img_np * bone_mask
     img_bone_sitk = sitk.GetImageFromArray(img_bone)
@@ -88,9 +92,7 @@ def extract_bone(nii_path, hu_threshold=250):
     sitk.WriteImage(img_bone_sitk, temp_bone_path)
     return temp_bone_path
 
-# -------------------------------
-# 5. 主程序
-# -------------------------------
+""" 主程序 """
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 data_root = r"F:\Files\Graduate_Research\X2DRR\data\CT"
