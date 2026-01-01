@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Pix2Pix Xray→DRR (Debug)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--epochs", "200",
+                "--batch_size", "8",
+                "--lr", "1e-4",
+                "--lambda_l1", "50",
+                "--lambda_edge", "1",
+                "--lambda_ssim", "1",
+                "--lambda_perc", "1"
+            ]
+        }
+    ]
+}
