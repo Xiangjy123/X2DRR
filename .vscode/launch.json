@@ -11,7 +11,7 @@
             "args": [
                 // "--patients", "2",
                 "--use_bone", "1",
-                "--hu_threshold", "10"
+                "--hu_threshold", "50"
             ],
             "env": {
                 "CUDA_VISIBLE_DEVICES": "0"
@@ -32,6 +32,24 @@
                 "--lambda_ssim", "1",
                 "--lambda_perc", "1"
             ]
+        },
+        {
+            "name": "Visualize Xray→DRR",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/code/visualize.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/code",
+            "args": [
+                "--checkpoint", "${workspaceFolder}/checkpoints/G_final.pth",
+                "--root_dir", "F:/Files/Graduate_Research/X2DRR/data/xray_drr",
+                "--method", "featuremap",
+                "--layer", "d5",
+                "--max_samples", "5",
+                "--save_dir", "${workspaceFolder}/visualizations"
+            ],
+            "justMyCode": true
         }
+
     ]
 }

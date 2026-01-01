@@ -132,7 +132,7 @@ def main(cfg):
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     BASE_DIR = Path(__file__).resolve().parent.parent
-    data_root = BASE_DIR / "data" / "xray_drr"
+    data_root = BASE_DIR / "data" / "deepfluoro"
     output_dir = BASE_DIR / "outputs"
     ckpt_dir = BASE_DIR / "checkpoints"
 
