@@ -119,25 +119,3 @@ class PatchDiscriminator(nn.Module):
 
     def forward(self, x, y):
         return self.model(torch.cat([x, y], 1))
-    
-class MultiScaleGenerator(nn.Module):
-    """
-    多尺度生成器，使用low_res和refine两个UNet。
-        low_res：一个标准的U-Net生成器，用于生成低分辨率的DRR图像。
-        refine：另一个U-Net生成器，用于对低分辨率的生成图像进行精细化处理，从而得到更高质量的最终DRR图像。
-    """
-    def __init__(self):
-        super().__init__()
-        self.low_res = UNetGenerator()  # 原始 UNet
-        self.refine = UNetGenerator()   # refine UNet
-
-    def forward(self, x):
-        # 不下采样，直接原始输入
-        # x: [b=8, c=1, h=256, w=256]
-        fake_low = self.low_res(x) # 假的低分辨率图像
-        # fake_low: [b=8, c=1, h=256, w=256]
-        # 上采样到原始尺寸（如果 low_res 生成尺寸被修改过）
-        fake_low_up = F.interpolate(fake_low, size=x.shape[2:], mode='bilinear', align_corners=False)
-        # fake_low: [b=8, c=1, h=256, w=256]
-        refined = self.refine(fake_low_up)
-        return refined

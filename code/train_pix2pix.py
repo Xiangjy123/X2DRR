@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import pytorch_msssim
 
 from dataset import XrayDRRDataset
-from models import MultiScaleGenerator, PatchDiscriminator
+from models import UNetGenerator, PatchDiscriminator
 
 
 # =====================================================
@@ -142,7 +142,7 @@ def main(cfg):
     loader = DataLoader(dataset, batch_size=cfg.batch_size, shuffle=True)
 
     # -------- Models --------
-    G = MultiScaleGenerator().to(device)
+    G = UNetGenerator().to(device)
     D = PatchDiscriminator().to(device)
 
     opt_G = torch.optim.Adam(G.parameters(), lr=cfg.lr, betas=(0.5, 0.999)) # betas是指数衰减率
