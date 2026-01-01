@@ -2,7 +2,23 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Pix2Pix Xray→DRR (Debug)",
+            "name": "DiffDRR DRR Generation",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/code/batch_generate_drr.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                // "--patients", "2",
+                "--use_bone", "1",
+                "--hu_threshold", "10"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            }
+        },
+        {
+            "name": "train",
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/code/train_pix2pix.py",
