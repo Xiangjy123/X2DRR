@@ -1,3 +1,7 @@
+"""
+基于 DiffDRR 从 CT 体数据生成与 X-ray 位姿一致的 DRR，并支持批量导出 PNG 与 DICOM。
+"""
+
 import torch
 import pydicom
 from torchvision.transforms.functional import center_crop

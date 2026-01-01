@@ -1,3 +1,7 @@
+"""
+使用 Pix2Pix 框架训练 X-ray → DRR 生成模型，并支持多种感知与结构一致性损失。
+"""
+
 import os
 import argparse
 from pathlib import Path

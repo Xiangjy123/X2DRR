@@ -1,3 +1,7 @@
+"""
+用于加载成对的 X-ray 与 DRR 图像，供 PyTorch 训练 X-ray → DRR 模型使用。
+"""
+
 import os
 from PIL import Image
 import torch

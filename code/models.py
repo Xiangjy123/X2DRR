@@ -1,3 +1,7 @@
+"""
+定义用于 X-ray → DRR 生成任务的 Pix2Pix 网络结构，包括 U-Net 生成器与 PatchGAN 判别器。
+"""
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
