@@ -150,13 +150,6 @@ def feature_map_vis(x, y, idx, top_k=8):
     plt.savefig(save_path)
     plt.close()
 
-
-
-import matplotlib.pyplot as plt
-import torch
-import torch.nn.functional as F
-import os
-
 def gradcam_vis(x, y, idx, img_size=256):
     """
     显示三张图：X-ray原图、目标DRR图、Grad-CAM热力图叠加
