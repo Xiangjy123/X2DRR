@@ -48,8 +48,8 @@
 ├── checkpoints/             # 训练模型权重
 ├── code/                    # 核心代码
 ├── data/                    # 数据集（详细见下文）
-├── outputs/                 # 实验结果与可视化
-├── visualizations/          # 中间特征与误差可视化
+├── outputs/                 # 实验结果
+├── visualizations/          # 可视化结果
 └── README.md
 ```
 
