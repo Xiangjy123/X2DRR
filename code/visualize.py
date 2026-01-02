@@ -152,26 +152,71 @@ def feature_map_vis(x, y, idx, top_k=8):
 
 
 
-def gradcam_vis(x, y, idx):
+import matplotlib.pyplot as plt
+import torch
+import torch.nn.functional as F
+import os
+
+def gradcam_vis(x, y, idx, img_size=256):
+    """
+    显示三张图：X-ray原图、目标DRR图、Grad-CAM热力图叠加
+    并保存到指定目录。
+    
+    :param x: 输入X-ray张量, [1, 1, H, W]
+    :param y: 对应的DRR张量, [1, 1, H, W]
+    :param idx: 图像索引或名称，用于保存文件
+    :param img_size: 输出图像大小
+    """
     x = x.requires_grad_(True)
     output = model(x)
+    
+    # L1 loss
     loss = F.l1_loss(output, y)
     model.zero_grad()
     loss.backward()
+    
+    # 获取梯度和特征图
     grad = gradients['value']      # [1, C, h, w]
     fmap = activation['value']     # [1, C, h, w]
+    
+    # Grad-CAM
     weights = grad.mean(dim=(2,3), keepdim=True)
     cam = (weights * fmap).sum(dim=1, keepdim=True)
     cam = F.relu(cam)
     cam = F.interpolate(cam, size=(img_size, img_size), mode='bilinear', align_corners=False)
     cam = cam.squeeze().cpu().numpy()
     cam = (cam - cam.min()) / (cam.max() - cam.min() + 1e-8)
+    
+    # 原图和目标DRR
     x_img = x.squeeze().cpu().detach().numpy()
-    plt.imshow(x_img, cmap='gray')
-    plt.imshow(cam, cmap='jet', alpha=0.5)
-    plt.axis('off')
+    y_img = y.squeeze().cpu().detach().numpy()
+    
+    # 创建三张图的subplot
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    
+    # 原X-ray
+    axes[0].imshow(x_img, cmap='gray')
+    axes[0].set_title("X-ray")
+    axes[0].axis('off')
+    
+    # 对应DRR
+    axes[1].imshow(y_img, cmap='gray')
+    axes[1].set_title("DRR")
+    axes[1].axis('off')
+    
+    # Grad-CAM叠加
+    axes[2].imshow(x_img, cmap='gray')
+    axes[2].imshow(cam, cmap='jet', alpha=0.5)
+    axes[2].set_title("Grad-CAM")
+    axes[2].axis('off')
+    
+    plt.tight_layout()
+    
+    # 保存
     save_path = os.path.join(save_dirs["gradcam"], f"{idx}_gradcam_{target_layer_name}.png")
-    plt.savefig(save_path)  
+    plt.savefig(save_path, bbox_inches='tight')
+    plt.close()
+
 
 def occlusion_vis(x, y, idx, patch_size=8):
     x_np = x.squeeze().cpu().detach().numpy()
