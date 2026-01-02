@@ -248,9 +248,6 @@ def occlusion_vis(x, drr, idx, patch_size=8):
     
     heatmap = (heatmap - heatmap.min()) / (heatmap.max() - heatmap.min() + 1e-8)
     
-    # -----------------------------
-    # 绘制三张图
-    # -----------------------------
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
     
     axes[0].imshow(x_np, cmap='gray')
