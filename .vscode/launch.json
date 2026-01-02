@@ -45,8 +45,8 @@
                 "--root_dir", "F:/Files/Graduate_Research/X2DRR/data/deepfluoro",
                 "--subjects", "subject01",
                 // "--method", "featuremap", "gradcam", "occlusion", "output_error", 
-                "--method", "gradcam",
-                "--layer", "u5",
+                "--method", "occlusion",
+                "--layer", "u1",
                 "--max_samples", "5",
                 "--save_dir", "${workspaceFolder}/visualizations"
             ],

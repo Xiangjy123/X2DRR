@@ -218,11 +218,26 @@ def gradcam_vis(x, y, idx, img_size=256):
     plt.close()
 
 
-def occlusion_vis(x, y, idx, patch_size=8):
+def occlusion_vis(x, drr, idx, patch_size=8):
+    """
+    可视化 X-ray -> DRR 模型的遮挡敏感性，将三张图放在同一张大图里：
+    1. X-ray 原图
+    2. DRR 目标图
+    3. Occlusion heatmap 叠加 X-ray
+
+    :param x: X-ray 输入图像 tensor, shape [1,1,H,W]
+    :param drr: DRR 图像 tensor, shape [1,1,H,W]
+    :param idx: 保存文件名索引
+    :param patch_size: 遮挡 patch 大小
+    """
     x_np = x.squeeze().cpu().detach().numpy()
+    drr_np = drr.squeeze().cpu().detach().numpy()
     H, W = x_np.shape
     heatmap = np.zeros((H, W))
+    
     baseline_output = model(x).detach()
+    
+    # 遮挡计算 heatmap
     for i in range(0, H, patch_size):
         for j in range(0, W, patch_size):
             x_occ = x.clone()
@@ -230,12 +245,33 @@ def occlusion_vis(x, y, idx, patch_size=8):
             out = model(x_occ).detach()
             diff = F.l1_loss(out, baseline_output).item()
             heatmap[i:i+patch_size, j:j+patch_size] = diff
+    
     heatmap = (heatmap - heatmap.min()) / (heatmap.max() - heatmap.min() + 1e-8)
-    plt.imshow(x_np, cmap='gray')
-    plt.imshow(heatmap, cmap='jet', alpha=0.5)
-    plt.axis('off')
-    save_path = os.path.join(save_dirs["occlusion"], f"{idx}_occlusion_{target_layer_name}.png")
+    
+    # -----------------------------
+    # 绘制三张图
+    # -----------------------------
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    
+    axes[0].imshow(x_np, cmap='gray')
+    axes[0].set_title("X-ray")
+    axes[0].axis('off')
+    
+    axes[1].imshow(drr_np, cmap='gray')
+    axes[1].set_title("DRR")
+    axes[1].axis('off')
+    
+    axes[2].imshow(x_np, cmap='gray')
+    axes[2].imshow(heatmap, cmap='jet', alpha=0.5)
+    axes[2].set_title("Occlusion Map")
+    axes[2].axis('off')
+    
+    save_path = os.path.join(save_dirs["occlusion"], f"{idx}_occlusion.png")
+    plt.tight_layout()
     plt.savefig(save_path)
+    plt.close()
+
+
 
 def output_error_vis(x, y, idx):
     with torch.no_grad():
