@@ -110,8 +110,7 @@ def generator_loss(fake, real, disc_pred, gan_loss_fn, perc_loss_fn, cfg):
 # =====================================================
 def to_uint8(t):
     t = (t * 0.5 + 0.5) * 255.0
-    return t.squeeze().cpu().numpy().astype("uint8")
-
+    return t.squeeze().detach().cpu().numpy().astype("uint8")
 
 def save_loss_curve(G_losses, D_losses, out_dir):
     plt.figure(figsize=(8, 6))

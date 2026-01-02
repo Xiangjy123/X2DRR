@@ -40,3 +40,35 @@
 `--lambda_edge`: 边缘损失权重  
 `--lambda_ssim`: SSIM损失权重  
 `--lambda_perc`: 感知损失权重  
+
+## 项目架构
+```
+.
+├── .vscode/                 # VS Code 调试配置
+├── checkpoints/             # 训练模型权重
+├── code/                    # 核心代码
+├── data/                    # 数据集（详细见下文）
+├── outputs/                 # 实验结果与可视化
+├── visualizations/          # 中间特征与误差可视化
+└── README.md
+```
+
+## 数据集架构
+```
+data/
+└── deepfluoro/
+    ├── subject01/
+    │   ├── DRRs_bone_dicom/ # DICOM格式的骨增强DRR
+    │   ├── DRRs_bone_png/   # png格式的骨增强DRR
+    │   ├── DRRs_dicom/      # DICOM格式的DRR
+    │   ├── DRRs_png/        # png格式的DRR
+    │   ├── xrays/           # DICOM格式的x-ray及pose
+    │   ├── xrays_png/       # png格式的x-ray
+    │   └── ...
+    ├── subject02/
+    │   └── ...
+    ├── ...
+    │   └── ...
+    └── subject06/
+        └── ...
+```
