@@ -17,6 +17,7 @@ import numpy as np
 from models import UNetGenerator
 from dataset import XrayDRRDataset
 import argparse
+import matplotlib.gridspec as gridspec
 
 # ----------------------------
 # 命令行参数
@@ -104,23 +105,52 @@ def show_image(img_tensor, title=None, save_path=None):
     else:
         plt.show()
 
-def feature_map_vis(x, idx):
+def feature_map_vis(x, y, idx, top_k=8):
+    """
+    Feature Map 可视化
+    - 左侧一列：X-ray (第一排) + GT DRR (第二排)
+    - 右侧独立网格显示前 top_k 个 feature map
+    """
     _ = model(x)
-    fmap = activation['value'][0]  # [C, H, W]
-    n_channels = min(16, fmap.shape[0])
-    fig, axes = plt.subplots(4, 4, figsize=(8, 8))
-    for i, ax in enumerate(axes.flatten()):
-        if i < n_channels:
-            fm = fmap[i]
-            fm = (fm - fm.min()) / (fm.max() - fm.min() + 1e-8)
-            fm = fm.unsqueeze(0).unsqueeze(0)  # [1,1,H,W]
-            fm = F.interpolate(fm, size=(img_size, img_size), mode='bilinear', align_corners=False)
-            fm = fm.squeeze().cpu()
-            ax.imshow(fm, cmap='gray')
+    fmap = activation['value'][0]  # [C,H,W]
+    n_channels = min(top_k, fmap.shape[0])
+    x_img = x.squeeze().detach().cpu().numpy()
+    y_img = y.squeeze().detach().cpu().numpy()
+
+    n_cols = 4
+    n_rows = int(np.ceil(n_channels / n_cols))
+
+    fig = plt.figure(figsize=(4*(n_cols+1), 4*(max(n_rows,2))))
+    import matplotlib.gridspec as gridspec
+    gs = gridspec.GridSpec(max(n_rows,2), n_cols + 1, figure=fig, wspace=0.1, hspace=0.1)
+
+    # 左侧固定显示 X 和 GT
+    ax_x = fig.add_subplot(gs[0,0])
+    ax_x.imshow(x_img, cmap='gray')
+    ax_x.set_title("Input X-ray")
+    ax_x.axis('off')
+
+    ax_y = fig.add_subplot(gs[1,0])
+    ax_y.imshow(y_img, cmap='gray')
+    ax_y.set_title("GT DRR")
+    ax_y.axis('off')
+
+    # 右侧 feature map 网格
+    for i in range(n_channels):
+        row = i // n_cols
+        col = (i % n_cols) + 1  # 第一列留给 X / GT
+        ax = fig.add_subplot(gs[row, col])
+        fm = fmap[i].detach().cpu().numpy()
+        vmin, vmax = np.percentile(fm, [1, 99])
+        ax.imshow(fm, cmap='gray', vmin=vmin, vmax=vmax, interpolation='nearest')
         ax.axis('off')
+
     plt.tight_layout()
-    plt.savefig(os.path.join(args.save_dir, f"{idx}_featuremap.png"))
+    save_path = os.path.join(save_dirs["featuremap"], f"{idx}_featuremap_{target_layer_name}.png")
+    plt.savefig(save_path)
     plt.close()
+
+
 
 def gradcam_vis(x, y, idx):
     x = x.requires_grad_(True)
@@ -140,8 +170,8 @@ def gradcam_vis(x, y, idx):
     plt.imshow(x_img, cmap='gray')
     plt.imshow(cam, cmap='jet', alpha=0.5)
     plt.axis('off')
-    plt.savefig(os.path.join(args.save_dir, f"{idx}_gradcam.png"))
-    plt.close()
+    save_path = os.path.join(save_dirs["gradcam"], f"{idx}_gradcam_{target_layer_name}.png")
+    plt.savefig(save_path)  
 
 def occlusion_vis(x, y, idx, patch_size=8):
     x_np = x.squeeze().cpu().detach().numpy()
@@ -159,8 +189,8 @@ def occlusion_vis(x, y, idx, patch_size=8):
     plt.imshow(x_np, cmap='gray')
     plt.imshow(heatmap, cmap='jet', alpha=0.5)
     plt.axis('off')
-    plt.savefig(os.path.join(args.save_dir, f"{idx}_occlusion.png"))
-    plt.close()
+    save_path = os.path.join(save_dirs["occlusion"], f"{idx}_occlusion_{target_layer_name}.png")
+    plt.savefig(save_path)
 
 def output_error_vis(x, y, idx):
     with torch.no_grad():
@@ -176,12 +206,28 @@ def output_error_vis(x, y, idx):
     axes[2].imshow(out_img, cmap='gray'); axes[2].set_title("Generated DRR"); axes[2].axis('off')
     axes[3].imshow(error_norm, cmap='hot'); axes[3].set_title("Absolute Error Map"); axes[3].axis('off')
     plt.tight_layout()
-    plt.savefig(os.path.join(args.save_dir, f"{idx}_output_error.png"))
-    plt.close()
+    save_path = os.path.join(save_dirs["output_error"], f"{idx}_output_error.png")
+    plt.savefig(save_path)
 
 # ----------------------------
 # 批量可视化
 # ----------------------------
+# 基础保存路径
+save_dir = "../visualizations"
+
+# 每种可视化单独文件夹
+save_dirs = {
+    "featuremap": os.path.join(save_dir, "featuremap"),
+    "gradcam": os.path.join(save_dir, "gradcam"),
+    "occlusion": os.path.join(save_dir, "occlusion"),
+    "output_error": os.path.join(save_dir, "output_error")
+}
+
+# 创建文件夹
+for d in save_dirs.values():
+    os.makedirs(d, exist_ok=True)
+
+
 for idx, (x, y) in enumerate(loader):
     if idx >= max_samples:
         break
@@ -191,7 +237,8 @@ for idx, (x, y) in enumerate(loader):
     if 'output_error' in methods:
         output_error_vis(x, y, idx)
     if 'featuremap' in methods:
-        feature_map_vis(x, idx)
+        feature_map_vis(x, y, idx)
+
     if 'gradcam' in methods:
         gradcam_vis(x, y, idx)
     if 'occlusion' in methods:

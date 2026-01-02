@@ -44,9 +44,9 @@
                 "--checkpoint", "${workspaceFolder}/checkpoints/G_final.pth",
                 "--root_dir", "F:/Files/Graduate_Research/X2DRR/data/deepfluoro",
                 "--subjects", "subject01",
-                "--method", "featuremap", "gradcam", "occlusion", "output_error", 
-                // "--method", "featuremap",
-                "--layer", "d5",
+                // "--method", "featuremap", "gradcam", "occlusion", "output_error", 
+                "--method", "featuremap",
+                "--layer", "d3",
                 "--max_samples", "5",
                 "--save_dir", "${workspaceFolder}/visualizations"
             ],
