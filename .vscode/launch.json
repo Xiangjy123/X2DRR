@@ -18,7 +18,7 @@
             }
         },
         {
-            "name": "train",
+            "name": "train-Pix2Pix",
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/code/train_pix2pix.py",
@@ -42,8 +42,10 @@
             "cwd": "${workspaceFolder}/code",
             "args": [
                 "--checkpoint", "${workspaceFolder}/checkpoints/G_final.pth",
-                "--root_dir", "F:/Files/Graduate_Research/X2DRR/data/xray_drr",
-                "--method", "featuremap",
+                "--root_dir", "F:/Files/Graduate_Research/X2DRR/data/deepfluoro",
+                "--subjects", "subject01",
+                "--method", "featuremap", "gradcam", "occlusion", "output_error", 
+                // "--method", "featuremap",
                 "--layer", "d5",
                 "--max_samples", "5",
                 "--save_dir", "${workspaceFolder}/visualizations"
