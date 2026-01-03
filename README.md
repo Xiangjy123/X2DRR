@@ -2,7 +2,9 @@
 根据X射线图生成降噪后的DRR图像。
 
 ## 使用指南
-直接把数据集`data`放在根目录下即可
+直接把数据集`data`放在根目录下即可  
+python：Python 3.11.7  
+CUDA：2.5.1+cu121 12.1
 
 ## 可运行脚本说明
 ### DiffDRR DRR Generation
