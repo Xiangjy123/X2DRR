@@ -1,4 +1,5 @@
 """
+CT2DRR.py
 本脚本用于将 CT DICOM 数据转换为 NIfTI，并基于 DiffDRR 批量生成对应的 DRR 图像。
 """
 

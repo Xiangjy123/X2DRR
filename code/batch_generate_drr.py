@@ -1,4 +1,5 @@
 """
+batch_generate_drr.py
 基于 DiffDRR 从 CT 体数据生成与 X-ray 位姿一致的 DRR，
 支持原 DRR + 骨增强 DRR，并输出 PNG 与 DICOM。
 可通过命令行参数控制处理病人、骨增强开关及骨阈值。

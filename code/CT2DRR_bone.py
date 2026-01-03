@@ -1,4 +1,5 @@
 """
+CT2DRR_bone.py
 本脚本用于将 CT DICOM 数据转换为 NIfTI，并基于 DiffDRR 生成增强后的骨结构 DRR 图像。
 """
 
