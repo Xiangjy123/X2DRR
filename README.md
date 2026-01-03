@@ -3,9 +3,17 @@
 
 ## 使用指南
 直接把数据集`data`放在根目录下即可  
-python：Python 3.11.7  
-CUDA：2.5.1+cu121 12.1
+## 环境配置
 
+### 基本环境
+- Python: **3.11.7**
+- PyTorch: **2.5.1 (CUDA 12.1)**
+
+### 创建 Conda 环境（推荐）
+```bash
+conda env create -f environment.yaml
+conda activate X2DRR
+```
 ## 可运行脚本说明
 ### DiffDRR DRR Generation
 `batch_generate_drr.py`
