@@ -1,5 +1,6 @@
 /data
 /checkpoints
+/generated_by_model
 
 no_use.py
 no_use.md

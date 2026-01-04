@@ -109,17 +109,17 @@ class PatchDiscriminator(nn.Module):
             return layers
 
         self.model = nn.Sequential(
-
+            # [4, 2, 256, 256]
             *block(in_channels, 64, norm=False), # *是解包操作符，把block()返回的列表解包为多个元素
-            
+            # [4, 64, 128, 128]
             *block(64, 128),
-
+            # [4, 128, 64, 64]
             *block(128, 256),
-
+            # [4, 256, 32, 32]
             *block(256, 512),
-
+            # [4, 512, 16, 16]
             nn.Conv2d(512, 1, 4, 1, 1)
-
+            # [4, 512, 15, 15]
         )
 
     def forward(self, x, y):
