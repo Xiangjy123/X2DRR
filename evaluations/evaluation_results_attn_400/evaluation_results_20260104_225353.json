@@ -1,0 +1,890 @@
+[
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr000.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr000_bone.png",
+    "psnr": 41.69540786743164,
+    "ssim": 0.989849166466713,
+    "lpips": 0.003597627393901348,
+    "nmi": 0.7007521154535825
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr001.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr001_bone.png",
+    "psnr": 38.23795700073242,
+    "ssim": 0.9886556411437988,
+    "lpips": 0.0037283841520547867,
+    "nmi": 0.6835286791144076
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr002.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr002_bone.png",
+    "psnr": 42.428619384765625,
+    "ssim": 0.9779782617516518,
+    "lpips": 0.004281528759747744,
+    "nmi": 0.7173676724221215
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr003.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr003_bone.png",
+    "psnr": 40.08067321777344,
+    "ssim": 0.9797841996097565,
+    "lpips": 0.004363120999187231,
+    "nmi": 0.7096435419554751
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr004.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr004_bone.png",
+    "psnr": 41.5593147277832,
+    "ssim": 0.9791743325276375,
+    "lpips": 0.003927091136574745,
+    "nmi": 0.7157100062501874
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr005.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr005_bone.png",
+    "psnr": 41.699913024902344,
+    "ssim": 0.9795366859812736,
+    "lpips": 0.004320860840380192,
+    "nmi": 0.7294185245962316
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr006.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr006_bone.png",
+    "psnr": 42.21205139160156,
+    "ssim": 0.9806303347373009,
+    "lpips": 0.0037794304080307484,
+    "nmi": 0.7208268879218485
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr007.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr007_bone.png",
+    "psnr": 42.286563873291016,
+    "ssim": 0.9805738118743896,
+    "lpips": 0.0036170324310660362,
+    "nmi": 0.7081118097274357
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr008.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr008_bone.png",
+    "psnr": 39.78015899658203,
+    "ssim": 0.9837937927207947,
+    "lpips": 0.0034661958925426006,
+    "nmi": 0.7043076027343522
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr009.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr009_bone.png",
+    "psnr": 39.65911102294922,
+    "ssim": 0.9858869964046478,
+    "lpips": 0.0038563667330890894,
+    "nmi": 0.6895829278903967
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr010.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr010_bone.png",
+    "psnr": 37.847190856933594,
+    "ssim": 0.9850912025136948,
+    "lpips": 0.003849139204248786,
+    "nmi": 0.6930727563673621
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr011.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr011_bone.png",
+    "psnr": 42.343421936035156,
+    "ssim": 0.9871135171074867,
+    "lpips": 0.003477518679574132,
+    "nmi": 0.6962090453541901
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr012.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr012_bone.png",
+    "psnr": 39.4998779296875,
+    "ssim": 0.9861051585159302,
+    "lpips": 0.0036841598339378834,
+    "nmi": 0.7003527343613892
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr013.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr013_bone.png",
+    "psnr": 38.46217727661133,
+    "ssim": 0.9868590434379577,
+    "lpips": 0.003477005986496806,
+    "nmi": 0.6895366963034092
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr014.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr014_bone.png",
+    "psnr": 36.847389221191406,
+    "ssim": 0.9883746360597611,
+    "lpips": 0.003914354834705591,
+    "nmi": 0.6861817049937443
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr015.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr015_bone.png",
+    "psnr": 37.034690856933594,
+    "ssim": 0.9871614230890274,
+    "lpips": 0.003641547402366996,
+    "nmi": 0.6852387820121519
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr016.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr016_bone.png",
+    "psnr": 36.682552337646484,
+    "ssim": 0.9852456259403228,
+    "lpips": 0.004514758009463549,
+    "nmi": 0.6850512063104216
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr017.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr017_bone.png",
+    "psnr": 38.54949951171875,
+    "ssim": 0.9854852299900055,
+    "lpips": 0.003684339579194784,
+    "nmi": 0.6910374560145164
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr018.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr018_bone.png",
+    "psnr": 36.64371871948242,
+    "ssim": 0.9846097934274674,
+    "lpips": 0.0033946922048926353,
+    "nmi": 0.698187745804444
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr019.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr019_bone.png",
+    "psnr": 40.955101013183594,
+    "ssim": 0.9878813140802384,
+    "lpips": 0.0032962998375296593,
+    "nmi": 0.7037901529442552
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr020.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr020_bone.png",
+    "psnr": 41.704044342041016,
+    "ssim": 0.9875335685548783,
+    "lpips": 0.003202938474714756,
+    "nmi": 0.7005989924000019
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr021.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr021_bone.png",
+    "psnr": 39.883033752441406,
+    "ssim": 0.9875772657117844,
+    "lpips": 0.0037286675069481134,
+    "nmi": 0.7001060810836592
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr022.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr022_bone.png",
+    "psnr": 37.210994720458984,
+    "ssim": 0.9833393831558227,
+    "lpips": 0.003836020128801465,
+    "nmi": 0.7066344223522748
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr023.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr023_bone.png",
+    "psnr": 38.57674026489258,
+    "ssim": 0.9879255143604279,
+    "lpips": 0.0038438034243881702,
+    "nmi": 0.6907684825719542
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr024.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr024_bone.png",
+    "psnr": 39.95335006713867,
+    "ssim": 0.9859415414915085,
+    "lpips": 0.0036861796397715807,
+    "nmi": 0.6917884570585597
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr025.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr025_bone.png",
+    "psnr": 37.75037384033203,
+    "ssim": 0.9855434045000077,
+    "lpips": 0.003792431205511093,
+    "nmi": 0.6948759959678599
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr026.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr026_bone.png",
+    "psnr": 41.934326171875,
+    "ssim": 0.9847088149824142,
+    "lpips": 0.002870294963940978,
+    "nmi": 0.7033395777834497
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr027.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr027_bone.png",
+    "psnr": 41.67947769165039,
+    "ssim": 0.9806034799380302,
+    "lpips": 0.0033431383781135082,
+    "nmi": 0.7133191937141878
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr028.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr028_bone.png",
+    "psnr": 44.27890396118164,
+    "ssim": 0.9807754710636138,
+    "lpips": 0.003989840857684612,
+    "nmi": 0.7192367948884782
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr029.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr029_bone.png",
+    "psnr": 39.26755905151367,
+    "ssim": 0.9855692294816971,
+    "lpips": 0.0031722059939056635,
+    "nmi": 0.7015448911524478
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr030.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr030_bone.png",
+    "psnr": 38.51401138305664,
+    "ssim": 0.9887857756881714,
+    "lpips": 0.00334802083671093,
+    "nmi": 0.6830723471809313
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr031.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr031_bone.png",
+    "psnr": 41.484561920166016,
+    "ssim": 0.987702970155716,
+    "lpips": 0.0030553373508155346,
+    "nmi": 0.702405735579891
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr032.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr032_bone.png",
+    "psnr": 43.15059280395508,
+    "ssim": 0.9862211037979126,
+    "lpips": 0.003241355763748288,
+    "nmi": 0.6962405165008402
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr033.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr033_bone.png",
+    "psnr": 40.74195861816406,
+    "ssim": 0.9816764163179398,
+    "lpips": 0.00442544836550951,
+    "nmi": 0.7046490732580462
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr034.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr034_bone.png",
+    "psnr": 39.76808166503906,
+    "ssim": 0.9885966067790986,
+    "lpips": 0.003999737091362476,
+    "nmi": 0.6818238487416078
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr035.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr035_bone.png",
+    "psnr": 39.36701965332031,
+    "ssim": 0.985111936372757,
+    "lpips": 0.003243879647925496,
+    "nmi": 0.70073736086734
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr036.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr036_bone.png",
+    "psnr": 41.91820526123047,
+    "ssim": 0.9772273933887482,
+    "lpips": 0.0035940464586019516,
+    "nmi": 0.69231969054052
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr037.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr037_bone.png",
+    "psnr": 40.53026580810547,
+    "ssim": 0.979363453212738,
+    "lpips": 0.004199688322842121,
+    "nmi": 0.7113523749431255
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr038.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr038_bone.png",
+    "psnr": 38.785701751708984,
+    "ssim": 0.9795077555646896,
+    "lpips": 0.00485800439491868,
+    "nmi": 0.7041132333457139
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr039.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr039_bone.png",
+    "psnr": 40.12785339355469,
+    "ssim": 0.9791052319588661,
+    "lpips": 0.004243440926074982,
+    "nmi": 0.6965816434208356
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr040.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr040_bone.png",
+    "psnr": 40.362762451171875,
+    "ssim": 0.9795497186927795,
+    "lpips": 0.004566416144371033,
+    "nmi": 0.6924243068344393
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr041.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr041_bone.png",
+    "psnr": 40.00889205932617,
+    "ssim": 0.9874076525042057,
+    "lpips": 0.0034241126850247383,
+    "nmi": 0.697237568060068
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr042.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr042_bone.png",
+    "psnr": 38.91114807128906,
+    "ssim": 0.9882335275115967,
+    "lpips": 0.0038920328952372074,
+    "nmi": 0.6880057363846869
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr043.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr043_bone.png",
+    "psnr": 37.54303741455078,
+    "ssim": 0.9869688081769943,
+    "lpips": 0.003973251674324274,
+    "nmi": 0.7014011563395923
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr044.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr044_bone.png",
+    "psnr": 38.79612350463867,
+    "ssim": 0.9879624733686447,
+    "lpips": 0.0038908759597688913,
+    "nmi": 0.701344928433268
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr045.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr045_bone.png",
+    "psnr": 40.61042785644531,
+    "ssim": 0.9881910454778672,
+    "lpips": 0.0032172957435250282,
+    "nmi": 0.7016492954814065
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr046.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr046_bone.png",
+    "psnr": 36.846988677978516,
+    "ssim": 0.9836601209115982,
+    "lpips": 0.004061080515384674,
+    "nmi": 0.6751044971534508
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr047.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr047_bone.png",
+    "psnr": 40.704227447509766,
+    "ssim": 0.9835413295211792,
+    "lpips": 0.0038437978364527225,
+    "nmi": 0.6912536195818815
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr048.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr048_bone.png",
+    "psnr": 39.053768157958984,
+    "ssim": 0.9773950719013215,
+    "lpips": 0.004571126773953438,
+    "nmi": 0.6981994797015315
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr049.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr049_bone.png",
+    "psnr": 38.10103988647461,
+    "ssim": 0.9749407606253624,
+    "lpips": 0.004801679402589798,
+    "nmi": 0.6981197983049418
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr050.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr050_bone.png",
+    "psnr": 39.626869201660156,
+    "ssim": 0.9820947114992141,
+    "lpips": 0.003817391349002719,
+    "nmi": 0.677183154130469
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr051.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr051_bone.png",
+    "psnr": 39.406646728515625,
+    "ssim": 0.9884205794944764,
+    "lpips": 0.003672319930046797,
+    "nmi": 0.6938031705415455
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr052.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr052_bone.png",
+    "psnr": 41.029884338378906,
+    "ssim": 0.9883039442510605,
+    "lpips": 0.0033240150660276413,
+    "nmi": 0.6880313705454327
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr053.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr053_bone.png",
+    "psnr": 36.984283447265625,
+    "ssim": 0.98166461506176,
+    "lpips": 0.005004703998565674,
+    "nmi": 0.6823405819651077
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr054.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr054_bone.png",
+    "psnr": 39.55247497558594,
+    "ssim": 0.9816895529937744,
+    "lpips": 0.004364218097180128,
+    "nmi": 0.6778807351906948
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr055.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr055_bone.png",
+    "psnr": 38.292640686035156,
+    "ssim": 0.9836603877258301,
+    "lpips": 0.004489713814109564,
+    "nmi": 0.6929847124470204
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr056.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr056_bone.png",
+    "psnr": 41.067352294921875,
+    "ssim": 0.9883954152355194,
+    "lpips": 0.0037737113889306784,
+    "nmi": 0.687584001169582
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr057.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr057_bone.png",
+    "psnr": 38.545501708984375,
+    "ssim": 0.986106429564476,
+    "lpips": 0.003795936470851302,
+    "nmi": 0.6976749235820636
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr058.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr058_bone.png",
+    "psnr": 37.37879943847656,
+    "ssim": 0.984281366625309,
+    "lpips": 0.0037457209546118975,
+    "nmi": 0.6815002295785891
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr059.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr059_bone.png",
+    "psnr": 41.285789489746094,
+    "ssim": 0.9741153915367127,
+    "lpips": 0.005001617129892111,
+    "nmi": 0.6848091971537767
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr060.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr060_bone.png",
+    "psnr": 32.586036682128906,
+    "ssim": 0.9831937190628052,
+    "lpips": 0.005165215581655502,
+    "nmi": 0.6829565467729231
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr061.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr061_bone.png",
+    "psnr": 38.6378288269043,
+    "ssim": 0.9872762881250381,
+    "lpips": 0.0033523133024573326,
+    "nmi": 0.6891412592253993
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr062.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr062_bone.png",
+    "psnr": 39.58173370361328,
+    "ssim": 0.982313504216671,
+    "lpips": 0.0035223588347434998,
+    "nmi": 0.6844859791686111
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr063.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr063_bone.png",
+    "psnr": 38.57688522338867,
+    "ssim": 0.9878686108722686,
+    "lpips": 0.0035622604191303253,
+    "nmi": 0.6833267913445724
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr064.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr064_bone.png",
+    "psnr": 37.974002838134766,
+    "ssim": 0.989183697971344,
+    "lpips": 0.003048000391572714,
+    "nmi": 0.6840347097574665
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr065.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr065_bone.png",
+    "psnr": 42.973785400390625,
+    "ssim": 0.9887837543187141,
+    "lpips": 0.003084088210016489,
+    "nmi": 0.6887338164879941
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr066.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr066_bone.png",
+    "psnr": 40.06374740600586,
+    "ssim": 0.9869463682632447,
+    "lpips": 0.003188424278050661,
+    "nmi": 0.7041247090733761
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr067.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr067_bone.png",
+    "psnr": 40.13134002685547,
+    "ssim": 0.9840043268795013,
+    "lpips": 0.0034974198788404465,
+    "nmi": 0.7014960251831515
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr068.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr068_bone.png",
+    "psnr": 38.99042892456055,
+    "ssim": 0.9886018856010437,
+    "lpips": 0.0029761262703686953,
+    "nmi": 0.6992084943826282
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr069.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr069_bone.png",
+    "psnr": 41.52806854248047,
+    "ssim": 0.9839024433841705,
+    "lpips": 0.004109617322683334,
+    "nmi": 0.6929839104125773
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr070.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr070_bone.png",
+    "psnr": 39.9305305480957,
+    "ssim": 0.9750858400006295,
+    "lpips": 0.0032164582516998053,
+    "nmi": 0.6991139047916487
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr071.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr071_bone.png",
+    "psnr": 40.399322509765625,
+    "ssim": 0.9777347675819397,
+    "lpips": 0.003355189226567745,
+    "nmi": 0.7016364278083449
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr072.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr072_bone.png",
+    "psnr": 39.678855895996094,
+    "ssim": 0.9769586068992615,
+    "lpips": 0.0034458236768841743,
+    "nmi": 0.7024149171219717
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr073.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr073_bone.png",
+    "psnr": 41.22021484375,
+    "ssim": 0.9883615246725083,
+    "lpips": 0.003685666248202324,
+    "nmi": 0.6866170658247137
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr074.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr074_bone.png",
+    "psnr": 39.3748664855957,
+    "ssim": 0.9763787204027176,
+    "lpips": 0.0037474390119314194,
+    "nmi": 0.6999835456381509
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr075.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr075_bone.png",
+    "psnr": 39.27399444580078,
+    "ssim": 0.9876324921150208,
+    "lpips": 0.003807751927524805,
+    "nmi": 0.6947852402503606
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr076.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr076_bone.png",
+    "psnr": 40.44696807861328,
+    "ssim": 0.9843152979454994,
+    "lpips": 0.0029534162022173405,
+    "nmi": 0.7076361608732586
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr077.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr077_bone.png",
+    "psnr": 40.56522750854492,
+    "ssim": 0.9726085073404312,
+    "lpips": 0.0035741226747632027,
+    "nmi": 0.6921013846276721
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr078.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr078_bone.png",
+    "psnr": 41.61505889892578,
+    "ssim": 0.9846948281741142,
+    "lpips": 0.0027834170032292604,
+    "nmi": 0.7122956671503935
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr079.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr079_bone.png",
+    "psnr": 39.86708068847656,
+    "ssim": 0.9701939841685295,
+    "lpips": 0.0041240244172513485,
+    "nmi": 0.6833151181956886
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr080.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr080_bone.png",
+    "psnr": 41.29508972167969,
+    "ssim": 0.9718020394992828,
+    "lpips": 0.003365854499861598,
+    "nmi": 0.6932542010648568
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr081.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr081_bone.png",
+    "psnr": 38.44297790527344,
+    "ssim": 0.97418643273592,
+    "lpips": 0.0038078133948147297,
+    "nmi": 0.687907593454773
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr082.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr082_bone.png",
+    "psnr": 41.23235321044922,
+    "ssim": 0.9825639559111595,
+    "lpips": 0.0029964540153741837,
+    "nmi": 0.698958590898482
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr083.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr083_bone.png",
+    "psnr": 42.416778564453125,
+    "ssim": 0.9883424925899505,
+    "lpips": 0.0029969108290970325,
+    "nmi": 0.6910076380273952
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr084.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr084_bone.png",
+    "psnr": 39.32830047607422,
+    "ssim": 0.9740729699792862,
+    "lpips": 0.004075928591191769,
+    "nmi": 0.682790670229152
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr085.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr085_bone.png",
+    "psnr": 39.93758773803711,
+    "ssim": 0.9752279065842628,
+    "lpips": 0.003930533770471811,
+    "nmi": 0.6749818900353824
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr086.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr086_bone.png",
+    "psnr": 43.66796112060547,
+    "ssim": 0.972403795668602,
+    "lpips": 0.003774863900616765,
+    "nmi": 0.6932059408870827
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr087.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr087_bone.png",
+    "psnr": 39.43804168701172,
+    "ssim": 0.9766023490233421,
+    "lpips": 0.003176259808242321,
+    "nmi": 0.6942346645365094
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr088.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr088_bone.png",
+    "psnr": 38.49409484863281,
+    "ssim": 0.974218230184555,
+    "lpips": 0.004262054339051247,
+    "nmi": 0.6867052922604083
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr089.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr089_bone.png",
+    "psnr": 41.312923431396484,
+    "ssim": 0.9791533386015892,
+    "lpips": 0.003900413401424885,
+    "nmi": 0.6991837747629872
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr090.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr090_bone.png",
+    "psnr": 39.977169036865234,
+    "ssim": 0.9834194821138382,
+    "lpips": 0.0038656615652143955,
+    "nmi": 0.6855734290062266
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr091.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr091_bone.png",
+    "psnr": 38.750091552734375,
+    "ssim": 0.9875572337627411,
+    "lpips": 0.003988930024206638,
+    "nmi": 0.6918171829115696
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr092.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr092_bone.png",
+    "psnr": 39.218021392822266,
+    "ssim": 0.9782687673001289,
+    "lpips": 0.002964736195281148,
+    "nmi": 0.7131512233004851
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr093.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr093_bone.png",
+    "psnr": 41.62492752075195,
+    "ssim": 0.9710594915065766,
+    "lpips": 0.0033508369233459234,
+    "nmi": 0.6720501048509719
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr094.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr094_bone.png",
+    "psnr": 40.86061096191406,
+    "ssim": 0.977663710866928,
+    "lpips": 0.003968704957515001,
+    "nmi": 0.6933808910193667
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr095.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr095_bone.png",
+    "psnr": 41.136634826660156,
+    "ssim": 0.9766155928502083,
+    "lpips": 0.003841927507892251,
+    "nmi": 0.6898343575606926
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr096.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr096_bone.png",
+    "psnr": 39.508941650390625,
+    "ssim": 0.974335651002407,
+    "lpips": 0.00397933553904295,
+    "nmi": 0.6904900985826398
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr097.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr097_bone.png",
+    "psnr": 40.145511627197266,
+    "ssim": 0.975283381295681,
+    "lpips": 0.004742554854601622,
+    "nmi": 0.6764738870965984
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr098.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr098_bone.png",
+    "psnr": 40.48937225341797,
+    "ssim": 0.9739943434906005,
+    "lpips": 0.0035912946332246065,
+    "nmi": 0.6842754116192632
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr099.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr099_bone.png",
+    "psnr": 42.21581268310547,
+    "ssim": 0.9766414208984375,
+    "lpips": 0.0032843630760908127,
+    "nmi": 0.6991359740019838
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr100.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr100_bone.png",
+    "psnr": 43.119964599609375,
+    "ssim": 0.9750219471244812,
+    "lpips": 0.0034742248244583607,
+    "nmi": 0.7015079441092056
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr101.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr101_bone.png",
+    "psnr": 41.36293411254883,
+    "ssim": 0.9740967614159584,
+    "lpips": 0.003928492311388254,
+    "nmi": 0.6825562386521556
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr102.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr102_bone.png",
+    "psnr": 39.707313537597656,
+    "ssim": 0.9757647798199653,
+    "lpips": 0.0041275592520833015,
+    "nmi": 0.693942856010331
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr103.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr103_bone.png",
+    "psnr": 41.47676467895508,
+    "ssim": 0.9814357748703957,
+    "lpips": 0.003515200922265649,
+    "nmi": 0.692555353149086
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr104.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr104_bone.png",
+    "psnr": 39.961151123046875,
+    "ssim": 0.9864591647996902,
+    "lpips": 0.004236830398440361,
+    "nmi": 0.6888482731062483
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr105.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr105_bone.png",
+    "psnr": 41.01630401611328,
+    "ssim": 0.9767181026496887,
+    "lpips": 0.003354955930262804,
+    "nmi": 0.6888413751428616
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr106.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr106_bone.png",
+    "psnr": 37.26716232299805,
+    "ssim": 0.9773510630865097,
+    "lpips": 0.0044061606749892235,
+    "nmi": 0.6756837697565217
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr107.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr107_bone.png",
+    "psnr": 40.9989128112793,
+    "ssim": 0.9827731828050613,
+    "lpips": 0.0034709754399955273,
+    "nmi": 0.6956630016086882
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr108.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr108_bone.png",
+    "psnr": 41.153419494628906,
+    "ssim": 0.9737390376329422,
+    "lpips": 0.0037093106657266617,
+    "nmi": 0.6749188053202986
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr109.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr109_bone.png",
+    "psnr": 40.55357360839844,
+    "ssim": 0.9799402348423004,
+    "lpips": 0.003497833153232932,
+    "nmi": 0.685860874842223
+  },
+  {
+    "generated_path": "generated_by_model\\subject01\\gen_drr110.png",
+    "target_path": "data\\deepfluoro\\subject01\\DRRs_bone_png\\drr110_bone.png",
+    "psnr": 39.62799072265625,
+    "ssim": 0.9813704312262536,
+    "lpips": 0.0037174299359321594,
+    "nmi": 0.6948388598266986
+  }
+]

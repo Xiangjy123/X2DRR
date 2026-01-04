@@ -98,3 +98,11 @@ data/
 4. 输出误差可视化（Output Error）  
 比较生成的 DRR 与真实 DRR 的像素级差异  
 显示输入 X-ray、GT DRR、生成 DRR 和绝对误差图  
+
+## 训练记录
+`_200`：初次训练，200个epoch  
+`_400`：400个epoch，调整了损失函数的权重。  
+· labda_edge: 1 → 10  
+· labda_ssim: 1 → 5  
+· labda_prec: 1 → 10  
+`_attn_400`：增加注意力门控，训练400个epoch
