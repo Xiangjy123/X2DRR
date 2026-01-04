@@ -333,7 +333,7 @@ class DRREvaluator:
         print(f"成功评估 {len(all_results)} 对图像")
         return all_results
 
-    def save_results(self, results, output_dir='evaluation_results'):
+    def save_results(self, results, output_dir='evaluations/evaluation_results'):
         """
         保存评估结果到文件和可视化
 
@@ -461,7 +461,7 @@ def main():
                        help='真实DRR图像目录（由CT获得）')
 
     parser.add_argument('--output_dir', type=str,
-                       default='evaluation_results2',
+                       default='evaluations/evaluation_results',
                        help='评估结果输出目录')
 
     parser.add_argument('--use_gpu', action='store_true',

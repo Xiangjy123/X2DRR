@@ -28,12 +28,12 @@ aug_suffix_dir = "_aug"
 
 # 增强倍数（每张原图生成多少增强图）
 subject_aug_factor = {
-    "subject01": 2,
-    "subject02": 2,
-    "subject03": 5,
-    "subject04": 4,
-    "subject05": 3,
-    "subject06": 5,
+    "subject01": 0,
+    "subject02": 0,
+    "subject03": 3,
+    "subject04": 1,
+    "subject05": 1,
+    "subject06": 3,
 }
 
 # 增强参数

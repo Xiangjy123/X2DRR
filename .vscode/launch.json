@@ -30,23 +30,8 @@
                 "--lambda_l1", "50",
                 "--lambda_edge", "10",
                 "--lambda_ssim", "5",
-                "--lambda_perc", "10"
-            ]
-        },
-        {
-            "name": "train-Pix2Pix-attn",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/code/train_pix2pix_attn.py",
-            "console": "integratedTerminal",
-            "args": [
-                "--epochs", "200",
-                "--batch_size", "8",
-                "--lr", "1e-4",
-                "--lambda_l1", "50",
-                "--lambda_edge", "1",
-                "--lambda_ssim", "1",
-                "--lambda_perc", "1"
+                "--lambda_perc", "10",
+                "--use_attention"
             ]
         },
         {

@@ -37,6 +37,9 @@ def parse_args():
     parser.add_argument("--lambda_edge", type=float, default=1)
     parser.add_argument("--lambda_ssim", type=float, default=1)
 
+    # -------- attention option --------
+    parser.add_argument("--use_attention", action="store_true", help="Use Attention Gate in U-Net")
+
     return parser.parse_args()
 
 
@@ -146,7 +149,7 @@ def main(cfg):
     loader = DataLoader(dataset, batch_size=cfg.batch_size, shuffle=True)
 
     # -------- Models --------
-    G = UNetGenerator().to(device)
+    G = UNetGenerator(use_attention=cfg.use_attention).to(device)
     D = PatchDiscriminator().to(device)
 
     opt_G = torch.optim.Adam(G.parameters(), lr=cfg.lr, betas=(0.5, 0.999)) # betas是指数衰减率
